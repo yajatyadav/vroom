@@ -1,0 +1,11 @@
+{
+    "exclude": [
+        "data/",
+        "slurm_logs/",
+        "out/",
+        "outputs/",
+        "results/",
+        "pretrained_models/",
+        "assets/",
+    ]
+}

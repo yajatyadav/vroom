@@ -1,0 +1,30 @@
+conda activate droidenv_clean
+created this environment by manually installing all relevant packages, with versioning trial-and-error until it worked (didn't install torch-scatter).
+
+Had to install gcc-10 in home directory and modify setup.py, adding '--compiler-bindir=/home/yajatyadav/opt/gcc-10/bin',
+to nvcc, could then succesfully run setup.py install.
+
+After that, had to run 
+export CUDA_HOME=/usr/lib/nvidia-cuda-toolkit
+export CC=~/opt/gcc-10/bin/gcc
+export CXX=~/opt/gcc-10/bin/g++
+export CFLAGS="-I$CUDA_HOME/include"
+export CXXFLAGS="-I$CUDA_HOME/include"
+export TORCH_CUDA_ARCH_LIST="8.6"
+export FORCE_CUDA=1
+export NVCC_FLAGS="--compiler-bindir=/home/yajatyadav/opt/gcc-10/bin"
+
+before installing torch-scatter
+
+
+
+mega-sam: similar story- after installing using the yaml file, python setup.py install will crash, so then need to do:
+# Activate your environment
+conda activate mega_sam_2
+
+# Install gcc 9 and g++ 9 inside Conda
+conda install -c conda-forge gcc_linux-64=9 gxx_linux-64=9
+
+# Tell torch/cpp_extension to use these versions
+export CC=$CONDA_PREFIX/bin/x86_64-conda-linux-gnu-gcc
+export CXX=$CONDA_PREFIX/bin/x86_64-conda-linux-gnu-g++
