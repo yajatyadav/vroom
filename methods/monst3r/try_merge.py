@@ -2,8 +2,8 @@ import open3d as o3d
 import numpy as np
 
 # ——— Parameters ———
-run1_path = "/home/yajatyadav/cs280/vroom/monst3r/demo_tmp/cl_top_half_24_fps_55_to_60_500_win_16/scene.glb"
-run2_path = "/home/yajatyadav/cs280/vroom/monst3r/demo_tmp/cl_top_half_24_fps_59_to_64/scene.glb"
+run1_path = "/home/username/cs280/vroom/monst3r/demo_tmp/cl_top_half_24_fps_55_to_60_500_win_16/scene.glb"
+run2_path = "/home/username/cs280/vroom/monst3r/demo_tmp/cl_top_half_24_fps_59_to_64/scene.glb"
 voxel_size = 0.05           # down‐sample voxel size (meters)
 ransac_dist = voxel_size * 1.5
 icp_dist    = voxel_size * 0.4

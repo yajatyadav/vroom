@@ -1,7 +1,7 @@
 conda activate droidenv_clean
 created this environment by manually installing all relevant packages, with versioning trial-and-error until it worked (didn't install torch-scatter).
 
-Had to install gcc-10 in home directory and modify setup.py, adding '--compiler-bindir=/home/yajatyadav/opt/gcc-10/bin',
+Had to install gcc-10 in home directory and modify setup.py, adding '--compiler-bindir=/home/username/opt/gcc-10/bin',
 to nvcc, could then succesfully run setup.py install.
 
 After that, had to run 
@@ -12,7 +12,7 @@ export CFLAGS="-I$CUDA_HOME/include"
 export CXXFLAGS="-I$CUDA_HOME/include"
 export TORCH_CUDA_ARCH_LIST="8.6"
 export FORCE_CUDA=1
-export NVCC_FLAGS="--compiler-bindir=/home/yajatyadav/opt/gcc-10/bin"
+export NVCC_FLAGS="--compiler-bindir=/home/username/opt/gcc-10/bin"
 
 before installing torch-scatter
 
